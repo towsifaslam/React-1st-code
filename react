@@ -1,0 +1,35 @@
+import React from "react";
+import ReactDOM from "react-dom";
+const domContainer = document.getElementById("root");
+const Increment = () => {
+  const [counter, setCounter] = React.useState(6);
+  return (
+    <div id="hi">
+      <h id="display">{counter}</h>
+      <div>
+        <button id="button" onClick={() => setCounter(counter + 2)}>
+          Increment +
+        </button>
+        <button id="button" onClick={() => setCounter(counter - 2)}>
+          Increment +
+        </button>
+      </div>
+    </div>
+  );
+};
+ReactDOM.render(
+  <div className="countainer">
+    <Increment />
+    <Increment />
+    <Increment />
+  </div>,
+  domContainer
+);
+// let number = 0;
+// const button = document.getElementById("button");
+// const display = document.getElementById("display");
+
+// button.addEventListener("click", () => {
+//   number++;
+//   display.textContent = number;
+// });
